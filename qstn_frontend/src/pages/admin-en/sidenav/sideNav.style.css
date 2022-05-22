@@ -1,0 +1,28 @@
+.sidenav-dash {
+    background-color: #8468F5;
+    border-radius: 25px;
+    max-width: 250px!important;
+}
+
+.sidenav-dash  .nav-link{
+    color: #FFFFFF;
+    margin-bottom: 18px;
+    display: flex;
+    white-space: nowrap;
+}
+
+.sidenav-dash  .nav-link:first-of-type{
+    display: block;
+}
+
+
+.sidenav-dash  .nav-link img{
+  margin-right: 10px;
+}
+
+
+img.avatar{
+    width: 65px;
+    border-radius: 100%;
+    margin-right: 0!important;
+}

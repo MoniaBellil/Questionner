@@ -1,0 +1,38 @@
+.primary-button {
+	background: linear-gradient(250.46deg, #8468f5 72.09%, #ec74e7 352.57%);
+  color: #ffffff;
+  border: #8468f5;
+  opacity: 0.9;
+}
+
+
+.secondary-button {
+	background: rgba(255, 255, 255, 0.3);
+  color: #8468F5;
+}
+.success-button {
+	box-shadow: 0px 0.867149px 4.55253px rgba(0, 0, 0, 0.18);
+	background: #01A249;
+	padding: 10px 15px!important;
+}
+.secondary-button,
+.primary-button,
+.success-button {
+	font-family: "Inter-Regular";
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 0.270833px;
+	border-radius: 16.9px;
+	padding: 10px 32px;
+}
+
+.primary-button:focus {
+	color: #fff;
+	background-color: #8468f5;
+	border-color: #8468f5;
+	box-shadow: none !important;
+}
+
+.primary-button:hover {
+	opacity: 1;
+}

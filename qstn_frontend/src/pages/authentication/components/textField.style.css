@@ -1,0 +1,23 @@
+.custom-input-auth {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: #A6A6A6;
+    border-bottom-color: #B8B8B8;
+    font-size: 17px;
+}
+
+
+.custom-input-auth:focus {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: #A6A6A6;
+    border-bottom-color: #2e2e2e;
+    font-size: 17px;
+    outline: none;
+}
+
+.unvalid-text {
+    font-size: 13px!important;
+}

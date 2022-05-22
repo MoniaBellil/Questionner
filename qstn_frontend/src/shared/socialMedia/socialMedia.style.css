@@ -1,0 +1,24 @@
+.social-media-container {
+	padding-top: 1%;
+}
+
+.social-media-container a {
+	margin-right: 12px;
+}
+
+.social-media-container a:hover {
+	opacity: 0.9;
+}
+
+.social-media-container a:last-child {
+	margin-right: 0;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+
+@media (max-width: 983px) {
+	.social-media-container {
+		display: flex;
+		justify-content: center;
+	}
+}

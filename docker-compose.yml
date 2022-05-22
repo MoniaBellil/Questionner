@@ -1,0 +1,92 @@
+version: "3.1"
+services:
+  nginx:
+    container_name: QSTN-nginx
+    build:
+      args:
+        - CERTBOT_EMAIL=${QSTN_IT_EMAIL}
+        - DOMAIN_LIST=qstn.com
+      context: ./docker/nginx
+      network: host
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./config/nginx:/etc/nginx/conf.d
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - QSTN-net
+
+  mongo:
+    container_name: qstn-mongo
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${QSTN_DB_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${QSTN_DB_PWD}
+      MONGO_INITDB_DATABASE: qstn
+    volumes:
+      - ~/QSTN/DB:/data/db
+    expose:
+      - 27017
+    networks:
+      - QSTN-net
+
+  mongo-express:
+    container_name: qstn-mongo-express
+    image: mongo-express
+    restart: always
+    expose:
+      - 8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${QSTN_DB_USER}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: $QSTN_DB_PWD}
+      ME_CONFIG_BASICAUTH_USERNAME: ${QSTN_DB_USER}
+      ME_CONFIG_BASICAUTH_PASSWORD: ${QSTN_DB_PWD}
+    depends_on: 
+      - mongo
+    networks:
+      - QSTN-net
+  
+  backend:
+    container_name: QSTN-backend
+    restart: always 
+    build: 
+      context: .
+      dockerfile: docker/backend/Dockerfile
+      network: host
+    expose:
+      - 3000
+    environment:
+      DATABASE: ${DATABASE}
+      USERNAME: ${USERNAME}
+      PASSWORD: ${PASSWORD}
+      FULLNAME: ${FULLNAME}
+      EMAIL: ${EMAIL}
+      ROLE: ${ROLE}
+      PORT: ${PORT}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRES_IN: ${JWT_EXPIRES_IN}
+    links:
+      - mongo
+    depends_on:
+      - mongo
+    networks:
+      - QSTN-net
+    
+  frontend:
+    container_name: QSTN-frontend
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: docker/frontend/Dockerfile
+      network: host
+    expose:
+      - 80
+    networks:
+      - QSTN-net
+    
+networks:
+  QSTN-net:

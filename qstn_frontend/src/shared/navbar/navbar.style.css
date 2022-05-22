@@ -1,0 +1,42 @@
+.main-nav {
+  z-index: 1!important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.main-nav .nav-link {
+  margin-right: 15px;
+  font-size: 16px;
+  font-family: "Inter-Regular";
+}
+
+.main-nav .nav-link.active {
+  color: #2d46b9 !important ;
+}
+
+.main-nav .nav-link:nth-child(5) {
+  margin-left: 25px;
+  margin-right: 0px !important;
+}
+
+
+
+
+/* Small devices (landscape phones, 576px and up)*/
+
+@media (max-width: 978px) {
+  .main-nav {
+    background: #ffff;
+  }
+  .main-nav .navbar-nav {
+    margin-top: 15px;
+  }
+  .main-nav .nav-link {
+    margin-right: 0px;
+  }
+
+  .main-nav .nav-link:nth-child(5) {
+    margin-left: 0px;
+  }
+}

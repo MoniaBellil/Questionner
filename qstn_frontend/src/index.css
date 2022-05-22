@@ -1,0 +1,17 @@
+/* import fonts */
+
+@import url("./assets/fonts/inter/inter.css");
+@import url("./assets/fonts/poppins/poppins.css");
+@import url("./style/Buttons.css");
+@import url("./style/global.styles.css");
+
+
+body {
+    margin: 0;
+    font-family: "Poppins-Regular", sans-serif;
+    font-size: 18px !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+

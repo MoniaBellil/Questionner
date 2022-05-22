@@ -1,0 +1,36 @@
+.terms-container {
+	padding-top: 10%;
+}
+
+.terms-container .accordion-header .accordion-button {
+	background: #8468f5;
+	color: #fff;
+	border-radius: 16px !important;
+}
+
+.terms-container .accordion-item {
+	border-radius: 16px !important;
+	background: #8468f5;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.terms-container .accordion-header .accordion-button::after {
+	width: 13px !important;
+	height: 7px !important;
+	background-size: cover !important;
+	background-image: url("../../assets/img/down-arrow.png") !important;
+}
+
+.accordion-button:focus {
+	box-shadow: none !important;
+}
+
+.title-terms h2 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 40px;
+	letter-spacing: 0.291667px;
+	color: #000000;
+}

@@ -1,0 +1,59 @@
+.landing-page-container {
+	padding-top: 10%;
+}
+
+.intro--title {
+	margin-bottom: 15px;
+}
+
+.intro--title h2 {
+	font-family: "Inter-Bold";
+	font-size: 44px;
+	font-style: normal;
+	line-height: 53px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.intro--description p {
+	font-family: 'Poppins-Regular';
+	font-style: normal;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.intro-buttons-container .primary-button,
+.intro-buttons-container .secondary-button {
+	box-shadow: 0px 4px 21px -2px rgb(0 0 0 / 9%);
+	border-radius: 100px;
+	font-family: "Poppins-Regular";
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px;
+}
+
+.intro-buttons-container .primary-button {
+	padding: 15px 62px;
+}
+
+.intro-buttons-container .secondary-button {
+	padding: 15px 54px;
+}
+
+.hero-container  img{
+   max-width: 400px;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+
+@media (max-width: 983px) {
+ 
+    .intro-buttons-container .primary-button {
+        margin-bottom: 20px;
+    }
+
+    .hero-container {
+        margin-top: 25px;
+    }
+  }
+  

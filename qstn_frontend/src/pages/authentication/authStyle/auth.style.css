@@ -1,0 +1,49 @@
+.auth-container {
+	padding-top: 10%;
+}
+
+.lock-image {
+	position: absolute;
+	left: -25px;
+	top: 10%;
+}
+
+.social-media-auth a {
+	margin-right: 15px;
+}
+
+.social-media-auth a:hover {
+	opacity: 0.8;
+}
+
+.social-media-auth a img {
+	max-width: 40px;
+}
+
+.heading-auth h2 {
+	font-family: 'Poppins-Bold';
+	font-style: normal;
+	font-size: 30px;
+}
+
+.or img {
+	margin-right: 9px;
+}
+
+.to-login-container p {
+	font-size: 15px;
+	color: #a6a6a6;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+
+@media (max-width: 978px) {
+	.background-lock {
+		display: none;
+	}
+
+	.create-account {
+		padding-top: 3rem !important;
+		padding-bottom: 3rem !important;
+	}
+}
